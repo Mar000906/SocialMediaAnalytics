@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card">
+  <h3>Importer un fichier CSV</h3>
+  <p>Colonnes requises : <code>platform, post_id, author, content, created_at, likes, comments, shares, views, followers</code>. Colonne optionnelle : <code>url</code>.</p>
+  <form method="post" enctype="multipart/form-data" class="upload-form">
+    <input type="file" name="file" accept=".csv">
+    <button type="submit">Importer</button>
+  </form>
+  <p>Exemple : <a href="{{ url_for('static', filename='../data/sample_posts.csv') }}">sample_posts.csv</a></p>
+</section>
+{% endblock %}

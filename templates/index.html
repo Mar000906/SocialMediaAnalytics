@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="kpis">
+  <div class="card">
+    <h3>Total Posts</h3>
+    <p class="kpi">{{ "{:,}".format(total_posts) }}</p>
+  </div>
+  <div class="card">
+    <h3>Likes</h3>
+    <p class="kpi">{{ "{:,}".format(sum_likes) }}</p>
+  </div>
+  <div class="card">
+    <h3>Commentaires</h3>
+    <p class="kpi">{{ "{:,}".format(sum_comments) }}</p>
+  </div>
+  <div class="card">
+    <h3>Partages</h3>
+    <p class="kpi">{{ "{:.2%}".format(avg_eng) }} avg engagement</p>
+  </div>
+</section>
+
+<section class="grid-2">
+  <div class="card">
+    <h3>Top 10 Posts (par engagement)</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Plateforme</th><th>Auteur</th><th>Extrait</th><th>Likes</th><th>Coms</th><th>Shares</th><th>ER</th><th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for p in top_posts %}
+        <tr>
+          <td>{{ p[0] }}</td>
+          <td>{{ p[1] }}</td>
+          <td class="clip">{{ p[2][:80] if p[2] else "" }}</td>
+          <td>{{ p[3] }}</td>
+          <td>{{ p[4] }}</td>
+          <td>{{ p[5] }}</td>
+          <td>{{ "{:.2%}".format(p[7]) }}</td>
+          <td>{{ p[9] }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>Top Hashtags</h3>
+    <ol class="hashtags">
+      {% for tag, count in top_hashtags %}
+      <li><span>#{{ tag }}</span> <em>{{ count }}</em></li>
+      {% endfor %}
+    </ol>
+
+    <h3 style="margin-top:1.25rem;">Posts récents</h3>
+    <ul class="recent">
+      {% for r in recent %}
+      <li>
+        <span class="badge">{{ r[0] }}</span>
+        <strong>{{ r[1] }}</strong>
+        <span class="muted">({{ r[7] }})</span>
+        <div class="clip">{{ r[2] }}</div>
+        <small>Likes {{ r[3] }} • Coms {{ r[4] }} • Shares {{ r[5] }} • ER {{ "{:.2%}".format(r[6]) }}</small>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% endblock %}

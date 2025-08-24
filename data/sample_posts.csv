@@ -1,0 +1,11 @@
+platform,post_id,author,content,created_at,likes,comments,shares,views,followers,url
+twitter,tw_001,marwa_ai,"Launching my new AI project! #AI #Python",2025-07-20 10:30:00,120,40,22,1500,1200,https://twitter.com/example1
+twitter,tw_002,marwa_ai,"Data cleaning is underrated. #DataScience",2025-07-21 14:12:00,80,18,10,1200,1200,https://twitter.com/example2
+youtube,yt_101,marwa_ai,"Beginner's guide to Streamlit (tutorial).",2025-07-18 09:00:00,560,110,65,12000,2800,https://youtube.com/watch?v=abc123
+instagram,ig_55,marwa_ai,"Dev life ☕️👩‍💻 #coding #dev",2025-07-22 19:45:00,220,35,20,3000,1400,https://instagram.com/p/xyz
+twitter,tw_003,marwa_ai,"Learning SQL joins today! #SQL #Learning",2025-07-23 08:05:00,95,25,11,1000,1200,https://twitter.com/example3
+youtube,yt_102,marwa_ai,"How to analyze sentiment with VADER",2025-07-30 12:00:00,780,160,82,18000,3000,https://youtube.com/watch?v=def456
+instagram,ig_58,marwa_ai,"Weekend vibes 🌿 #life",2025-08-01 17:00:00,190,20,12,2500,1450,https://instagram.com/p/uvw
+twitter,tw_004,marwa_ai,"New blog: Tips for clean code. #CleanCode",2025-08-05 11:30:00,130,28,16,1600,1250,https://twitter.com/example4
+youtube,yt_103,marwa_ai,"Build a budget app in Flask!",2025-08-10 11:00:00,900,200,120,22000,3200,https://youtube.com/watch?v=ghi789
+instagram,ig_61,marwa_ai,"Daily stand-up setup #scrum",2025-08-15 09:15:00,160,22,8,2100,1500,https://instagram.com/p/lmn
